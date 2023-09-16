@@ -6,7 +6,8 @@ const gatitos = [
         edad: 'Rock',
         vacunas: '2017-10-27',
         castrado: 'Random',
-        imagen: 'https://example.com/imagenes/charly_garcia.jpg'
+        imagen: 'https://example.com/imagenes/charly_garcia.jpg',
+        src: 'gatito1.html',
     },
     {
         nombre: 'Dobby',
@@ -15,7 +16,8 @@ const gatitos = [
         edad: 'Rock',
         vacunas: '2017-10-27',
         castrado: 'Random',
-        imagen: 'https://example.com/imagenes/charly_garcia.jpg'
+        imagen: 'https://example.com/imagenes/charly_garcia.jpg',
+        src: 'gatito2.html',
     },
     {
         nombre: 'Frodo',
@@ -76,9 +78,18 @@ const listadoGatitos = (gatitos) => {
     gatitos.forEach((gatito) => {
       
       const li = document.createElement("li");
-      li.innerHTML = `<span>${gatito.nombre}. ${gatito.descripcion}</span>`;            
-      taskList.appendChild(li);
+      li.innerHTML = `<span>${gatito.nombre}. ${gatito.descripcion}</span>`; 
+      
+      const botonEditar = document.createElement("button");
+        botonEditar.innerHTML = "Ver gatito"; 
+        botonEditar.onclick = function() {
+            // Redirigir a gatito1.html
+            window.location.href = `${gatito.src}`;
+        };        
+        listaDeGatitos.appendChild(li);
+      li.appendChild(botonEditar);
     });
 };
 listadoGatitos(gatitos);
+
 
