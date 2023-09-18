@@ -8,7 +8,7 @@ const gatitos = [
         vacunas: 'Trivalente',
         castrado: 'Si',
         imagen: '/img/Gato1.jpg',
-        src: 'gatito1.html',
+        src: 'infoGatitos.html',
     },
     {
         nombre: 'LUCY',
@@ -18,7 +18,7 @@ const gatitos = [
         vacunas: 'Trivalente, leucemia',
         castrado: 'Si',
         imagen: '/img/Gato2.jpg',
-        src: 'gatito2.html',
+        src: 'infoGatitos.html',
     },    
     {
         nombre: 'SIN NOMBRE',
@@ -28,7 +28,7 @@ const gatitos = [
         vacunas: 'Desparasitados.',
         castrado: 'No.',
         imagen: '/img/Gato3.jpg',
-        src: 'gatito3.html',
+        src: 'infoGatitos.html',
     },    
     {
         nombre: 'ARTURO',
@@ -38,7 +38,7 @@ const gatitos = [
         vacunas: 'Desparasitado. Leucemia.',
         castrado: 'No.',
         imagen: '/img/Gato4.jpg',
-        src: 'gatito4.html',
+        src: 'infoGatitos.html',
     },    
     {
         nombre: 'MIGUEL',
@@ -48,8 +48,18 @@ const gatitos = [
         vacunas: 'Desparasitado. Leucemia. Trivalente.',
         castrado: 'Si.',
         imagen: '/img/Gato5.jpg',
-        src: 'gatito5.html',
-    },    
+        src: 'infoGatitos.html',
+    },  
+    {
+        nombre: 'PEQUE',
+        descripcion: 'Muy juguetón, le gusta la compañía.',
+        raza: 'Jengibre',
+        edad: '4 meses',
+        vacunas: 'Desparasitado.',
+        castrado: 'No.',
+        imagen: '/img/Gato6.jpg',
+        src: 'infoGatitos.html',
+    },      
     {
         nombre: 'MANCHITA',
         descripcion: 'No se lleva bien con otros gatos, sí con los perros y los niños.',
@@ -58,7 +68,7 @@ const gatitos = [
         vacunas: 'Desparasitado. VIH.',
         castrado: 'Sí.',
         imagen: '/img/Gato7.jpg',
-        src: 'gatito7.html',
+        src: 'infoGatitos.html',
     }, 
     {
         nombre: 'SIN NOMBRE',
@@ -68,7 +78,7 @@ const gatitos = [
         vacunas: 'Desparasitado.',
         castrado: 'No.',
         imagen: '/img/Gato8.jpg',
-        src: 'gatito8.html',
+        src: 'infoGatitos.html',
     },       
     {
         nombre: 'ATILIO',
@@ -78,7 +88,7 @@ const gatitos = [
         vacunas: 'Desparasitado.',
         castrado: 'No.',
         imagen: '/img/Gato9.jpg',
-        src: 'gatito9.html',
+        src: 'infoGatitos.html',
     },  
     {
         nombre: 'BLANQUITA',
@@ -88,67 +98,70 @@ const gatitos = [
         vacunas: 'Desparasitado. Trivalente, rabia, leucemia.',
         castrado: 'Sí.',
         imagen: '/img/Gato10.jpg',
-        src: 'gatito10.html',
+        src: 'infoGatitos.html',
     },            
 ];
 
-//ARMO LISTA DE GATITOS//
-const listaDeGatitos = document.querySelector("#listaDeGatitos");
-const listadoGatitos = (gatitos) => {
+// //ARMO LISTA DE GATITOS//
+// const listaDeGatitos = document.querySelector("#listaDeGatitos");
+// const listadoGatitos = (gatitos) => {
     
-    gatitos.forEach((gatito) => {
+//     gatitos.forEach((gatito) => {
       
-      const li = document.createElement("li");
-      li.innerHTML = `<span>${gatito.nombre}. ${gatito.descripcion}</span>`; 
+//       const li = document.createElement("li");
+//       li.innerHTML = `<span>${gatito.nombre}. ${gatito.descripcion}</span>`; 
       
-      const botonVer = document.createElement("button");
-        botonVer.innerHTML = "Ver gatito"; 
-        botonVer.onclick = function() {
+//       const botonVer = document.createElement("button");
+//         botonVer.innerHTML = "Ver gatito"; 
+//         botonVer.onclick = function() {
            
-            window.location.href = gatito.src;
-        };        
-        listaDeGatitos.appendChild(li);
-        li.appendChild(botonVer);
-    });
-};
-listadoGatitos(gatitos);
+//             window.location.href = gatito.src;
+//         };        
+//         listaDeGatitos.appendChild(li);
+//         li.appendChild(botonVer);
+//     });
+// };
+// listadoGatitos(gatitos);
 
 
 
- //CREO CARD DE GATITOS//
-const infoGatito = document.querySelector("#infoGatito");
-const nombreGatito = window.location.pathname.split('/').pop().split('.')[0];
-const gatito = gatitos.find(g => g.src === `${nombreGatito}.html`);
+ //CREO CARD DE GATITOS// OK NO CAMBIAR!!!
+ let tarjeta = document.querySelector('.tarjeta');
+ gatitos.forEach((gatito)=> {
+ let tarjetaGatito = document.createElement('div');
+ tarjetaGatito.className = 'tarjeta';
+ tarjetaGatito.innerHTML = `
+  <h2>Nombre: ${gatito.nombre}</h2>
+  <p>Edad: ${gatito.edad}</p>
+  <p>Raza: ${gatito.raza}</p>
+  <p>Vacunas: ${gatito.vacunas}</p>
+  <p>Castrado: ${gatito.castrado}</p>
+  <img
+    src="${gatito.imagen}"
+    style="width: 50%"
+  />
+  </div>`;
 
-if(gatito) {
   
-  const card = document.createElement("card");
-  const nombre = document.createElement("H1");
-  const raza = document.createElement("p");
-  const edad = document.createElement("p");
-  const vacunas = document.createElement("p");
-  const castrado = document.createElement("p");
-  const imagen = document.createElement("img");
   
-  
- nombre.textContent = gatito.nombre;
- raza.textContent = gatito.raza;
- edad.textContent = gatito.edad;
- vacunas.textContent = gatito.vacunas;
- castrado.textContent = gatito.castrado;
- imagen.src = gatito.imagen;
+//  nombre.textContent = gatito.nombre;
+//  raza.textContent = gatito.raza;
+//  edad.textContent = gatito.edad;
+//  vacunas.textContent = gatito.vacunas;
+//  castrado.textContent = gatito.castrado;
+//  imagen.src = gatito.imagen;
  
  
- card.appendChild(nombre);
- card.appendChild(raza);
- card.appendChild(edad);
- card.appendChild(vacunas);
- card.appendChild(castrado);
- card.appendChild(imagen);
+//  card.appendChild(nombre);
+//  card.appendChild(raza);
+//  card.appendChild(edad);
+//  card.appendChild(vacunas);
+//  card.appendChild(castrado);
+//  card.appendChild(imagen);
   
- infoGatito.appendChild(card);
-}else {
-    console.error(`No se encontró información para el gatito ${nombreGatito}`);
-}
+ tarjeta.appendChild(tarjetaGatito);
+
+
+});
 });
 
