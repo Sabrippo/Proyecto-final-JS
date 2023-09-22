@@ -6,8 +6,7 @@
         "edad": "2 años",
         "vacunas": "Trivalente",
         "castrado": "Si",
-        "imagen": "/img/Gato1.jpg",
-        "src": "infoGatitos.html",
+        "imagen": "/img/Gato1.jpg",        
         "id":"1"
     },
     {
