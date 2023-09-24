@@ -1,6 +1,6 @@
  {"gatitos": [
     {
-        "nombre": "PEPPER",
+        "nombre": "Pepper",
         "descripcion": "Súper cariñoso y tranquilo.",
         "raza": "Atigrado",
         "edad": "2 años",
@@ -10,7 +10,7 @@
         "id":"1"
     },
     {
-        "nombre": "LUCY",
+        "nombre": "Lucy",
         "descripcion": "Se lleva bien con otros gatos.",
         "raza": "Tabby",
         "edad": "6 años",
@@ -21,7 +21,7 @@
         "id":"2"
     },    
     {
-        "nombre": "SIN NOMBRE",
+        "nombre": "Ron y Coca",
         "descripcion": "Son  hermanos, se adoptan juntos. Una hembra y un macho. Van a las piedritas",
         "raza": "Tabby",
         "edad": "2 meses",
@@ -32,7 +32,7 @@
         "id":"3"
     },    
     {
-        "nombre": "ARTURO",
+        "nombre": "Arturo",
         "descripcion": "No le gusta dormir solo, se lleva bien con otros gatos.",
         "raza": "Europea mixta",
         "edad": "2 años",
@@ -43,7 +43,7 @@
         "id":"4"
     },    
     {
-        "nombre": "MIGUEL",
+        "nombre": "Miguel",
         "descripcion": "Es miedoso, no le gusta el ruido.",
         "raza": "Munchkin",
         "edad": "5 años",
@@ -54,7 +54,7 @@
         "id":"5"
     },  
     {
-        "nombre": "PEQUE",
+        "nombre": "Peque",
         "descripcion": "Muy juguetón, le gusta la compañía.",
         "raza": "Jengibre",
         "edad": "4 meses",
@@ -65,7 +65,7 @@
         "id":"6"
     },      
     {
-        "nombre": "MANCHITA",
+        "nombre": "Manchita",
         "descripcion": "No se lleva bien con otros gatos, sí con los perros y los niños.",
         "raza": "Bengala.",
         "edad": "3 años",
@@ -76,7 +76,7 @@
         "id":"7"
     }, 
     {
-        "nombre": "SIN NOMBRE",
+        "nombre": "Mustafá",
         "descripcion": "Es muy cariñoso y asustadizo.",
         "raza": "Siberiano",
         "edad": "3 meses",
@@ -87,7 +87,7 @@
         "id":"8"
     },       
     {
-        "nombre": "ATILIO",
+        "nombre": "Atilio",
         "descripcion": "Le encanta treparse por todos lados.",
         "raza": "Atigrado.",
         "edad": "1 año.",
@@ -98,7 +98,7 @@
         "id":"9"
     },  
     {
-        "nombre": "BLANQUITA",
+        "nombre": "Blanquita",
         "descripcion": "Muy tranquilo y dormilón, te sigue a todos lados.",
         "raza": "Persa silver.",
         "edad": "4 años.",
