@@ -9,10 +9,14 @@ document.addEventListener ("DOMContentLoaded", () => {
         infoGatitos.gatitos.forEach((gatito) => { 
             const divGatito = document.createElement("div");
             divGatito.classList.add ("div-item");
+            divGatito.classList.add("card");
+            divGatito.classList.add("mx-auto");
             divGatito.innerHTML = `                
-                <img src="${gatito.imagen}";/>
-                <h2>${gatito.nombre}</h2>
-                `;
+            <img src="${gatito.imagen}" class="card-img-top" alt="${gatito.nombre}"> 
+            <div class="card-body"> 
+                <h5 class="card-title">${gatito.nombre}</h5>
+            </div>
+        `;
 
         divGatito.addEventListener('click', () => {
             verGatitoSeleccionado(gatito);

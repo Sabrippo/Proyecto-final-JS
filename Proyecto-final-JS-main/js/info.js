@@ -16,14 +16,17 @@ document.addEventListener ("DOMContentLoaded", () => {
 
         const muestroGatito = document.createElement ("div");
         muestroGatito.classList.add ("esteGatito");
+        muestroGatito.classList.add("card", "d-flex", "flex-row","align-items-start");
         muestroGatito.innerHTML = `
-        <h2>Nombre: ${gatitoElegido.nombre}</h2>
-        <p>Edad: ${gatitoElegido.edad}</p>
-        <p>Raza: ${gatitoElegido.raza}</p>
-        <p>Vacunas: ${gatitoElegido.vacunas}</p>
-        <p>Castrado: ${gatitoElegido.castrado}</p>
-        <img src="${gatitoElegido.imagen}"style="width: 50%"/>`;
-        
+        <img src="${gatitoElegido.imagen}" class="card-img" style="width: 50%;">
+        <div class="card-body"> 
+        <h2 class="card-title">Me llamo ${gatitoElegido.nombre}</h2>
+        <p class="card-text">Tengo ${gatitoElegido.edad}</p>
+        <p class="card-text">Soy un gatito ${gatitoElegido.raza}</p>
+        <p class="card-text">Tengo vacunas ${gatitoElegido.vacunas}</p>
+        <p class="card-text">Estoy castrado? ${gatitoElegido.castrado}</p>
+        </div>
+        `;
         contenedor.appendChild(muestroGatito);
         
     }
